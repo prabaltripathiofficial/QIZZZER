@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Quiz Results</title>
+</head>
+<body>
+    <script>
+        window.addEventListener("load", fetchItems)
+
+        function fetchItems() {
+            document.getElementById("answered").innerHTML = localStorage.getItem("ans");
+            document.getElementById("correct").innerHTML = localStorage.getItem("cor");
+            document.getElementById("wrong").innerHTML = localStorage.getItem("wro");
+            document.getElementById("score").innerHTML = localStorage.getItem("sco");
+        }
+    </script>
+    <div class="report">
+        <h1 class="big">Congratulations!</h1>
+        <div class="report-details">
+            <h1>Your Report Card</h1>
+            <hr>
+            <h2>Attempted:</h2><span id="answered"></span>
+            <h2>Correct:</h2><span id="correct"></span>
+            <h2>Wrong:</h2><span id="wrong"></span>
+            <hr>
+            <h1>Total Marks:</h1><span id="score"></span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Question Page</title>
+</head>
+<body>
+    <div class="fcontainer">
+        <div class="left">
+            <div class="topleft">
+                <div class="countdowntimer values" id="minutes">00</div>
+                <div class="countdowntimer values" id="seconds">00</div>
+                <button class="btn2 countdowntimer values" id="submit" onclick="submitQuiz()">
+                    SUBMIT
+                </button>
+            </div>
+            <div class="leftmid">
+                <h1 class="questionnumber" id="qno">Question 1</h1>
+                <h2 class="question" id="ques">What is the name of the famous tourist spot in Paris?</h2>
+                <div class="options">
+                    <div class="optionitem">
+                        <input type="radio" name="answer" id="option1" value="1">
+                        <label class="custom-option" for="option1">
+                            <span class="option-label">Eiffel Tower</span>
+                        </label>
+                    </div>
+                    <div class="optionitem">
+                        <input type="radio" name="answer" id="option2" value="2">
+                        <label class="custom-option" for="option2">
+                            <span class="option-label">Louvre Museum</span>
+                        </label>
+                    </div>
+                    <div class="optionitem">
+                        <input type="radio" name="answer" id="option3" value="3">
+                        <label class="custom-option" for="option3">
+                            <span class="option-label">Notre-Dame Cathedral</span>
+                        </label>
+                    </div>
+                    <div class="optionitem">
+                        <input type="radio" name="answer" id="option4" value="4">
+                        <label class="custom-option" for="option4">
+                            <span class="option-label">Champs-Élysées</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="righttop">
+                <h1>OVERVIEW</h1>
+                <h2>Answered:</h2><span id="answered" class="overview">0</span><br>
+                <h2>Un-Answered:</h2><span id="unAnswered" class="overview">12</span><br>
+                <h2>Marked for review:</h2><span id="markedForReview" class="overview">0</span><br>
+            </div>
+            <div class="rightmid">
+                <h1>MENU</h1>
+                <button class="questions" id="q1" onclick="gotoQuestion(1)">1</button>
+                <button class="questions" id="q2" onclick="gotoQuestion(2)">2</button>
+                <button class="questions" id="q3" onclick="gotoQuestion(3)">3</button>
+                <button class="questions" id="q4" onclick="gotoQuestion(4)">4</button>
+                <br><br>
+                <button class="questions" id="q5" onclick="gotoQuestion(5)">5</button>
+                <button class="questions" id="q6" onclick="gotoQuestion(6)">6</button>
+                <button class="questions" id="q7" onclick="gotoQuestion(7)">7</button>
+                <button class="questions" id="q8" onclick="gotoQuestion(8)">8</button>
+                <br><br>
+                <button class="questions" id="q9" onclick="gotoQuestion(9)">9</button>
+                <button class="questions" id="q10" onclick="gotoQuestion(10)">10</button>
+                <button class="questions" id="q11" onclick="gotoQuestion(11)">11</button>
+                <button class="questions" id="q12" onclick="gotoQuestion(12)">12</button>
+            </div>
+            <div class="rightbottom">
+                <h1>CONTROLS</h1>
+                <button class="navigate" id="btn3" onclick="next()">NEXT</button>
+                <button class="navigate" id="btn4" onclick="previous()">PREVIOUS</button>
+                <button class="navigate" id="btn5" onclick="flag()">MARK</button>
+            </div>
+        </div>
+    </div>
+    <script src="dom.js"></script>
+</body>
+</html>
